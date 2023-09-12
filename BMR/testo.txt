@@ -1,0 +1,22 @@
+Sesso: M;
+Età: 33;
+Peso: 95;
+altezza: 184;
+BMR: 2070 kcal (Basal Metabolic Rate)
+Fabbisogno giornaliero approssimativo: 2700kcal
+
+Tabella consumo calorico attività quotidiane
+
+Dormire: 28kcal
+Giardinaggio: 175kcal;
+guardare la tv: 35kcal;
+Guidare: 63kcal;
+Lavorare al pc: 70kcal;
+
+Varie Formule
+Calcolo metabolismo basale nell'uomo (kcal)
+ - Harris & Benedict: 66,4730 + (13,7516 * peso in kg) +
+ (5,0033 * statura in cm) - (6,7550 * età in anni)
+
+Donna:
+655,095 + (9,563 x peso in kg) + (1,8496 x altezza in cm) – (età x 4,6756)

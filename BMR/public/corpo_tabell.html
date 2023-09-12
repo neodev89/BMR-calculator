@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile_tabella.css">
+    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title>BMR e consumi kcal</title>
+</head>
+<body>
+    <a name="inizio"></a>
+    <div class="title">
+        <h1>Calcolo BMR & BMI</h1>
+    </div>
+    <main class="bodyTable">
+        <div class="BMR">
+            <div>
+                <label for="weight">Weight</label><br>
+                <input type="text" id="weight" placeholder="kg">
+            </div>
+            <div>
+                <label for="height">Height</label><br>
+                <input type="text" id="height" placeholder="cm">
+            </div>
+            <div>
+                <label for="age">Age</label><br>
+                <input type="text" id="age" placeholder="years">
+            </div>
+            <div>
+                <button type="button" id="uomo">Man</button>
+                <button type="button" id="donna">Woman</button>
+                <br>
+                <button id="cancella">Reset</button>
+
+            </div>
+            <div>
+                <p id="result">
+                    <span id="formula"></span> <!--Qui stamperò i numeri 
+                    inseriti negli input + il risultato-->
+                </p>
+            </div>
+            
+        </div>
+        <div id="BMI">
+            <div>
+                <p>BMI(IMC) = (Weight / (Height<sup>2</sup>))<br>
+                <sub>*come da Ministero della Salute</sub></p>
+            </div>
+            <div>
+                <p><span class="parametri"></span></p>
+                <p><span class="parametri"></span></p>
+                <p><span id="fine"></span></p>
+            </div>
+            <button type="submit" id="attivaBMI">Calc</button>
+            <button type="reset" id="cancellaBMI">Delete</button>
+        </div>
+    </main>
+    <main class="bodyTable">
+        <div class="title">
+            <h1>Calcola il consumo delle kcal</h1>
+        </div>
+
+        <div id="attivita">
+
+        </div>
+        <div id="consumi" class="colorami">
+
+            <div >
+                <h3><i>Inserisci i dati</i></h3>
+                
+            </div>
+            <div id="first">
+                <div class="second basso">
+                    <div><p>Alimento</p></div>
+                    <div><p>kcal*1h*1kg</p></div>
+                    <div><p>Ore svolte</p></div>
+                    <div><p>minuti</p></div>
+                    <div><p>Risultato</p></div>
+                </div>
+                <div class="second colorato">
+                    <label>Seleziona l'attività</label>
+
+                </div>
+
+                <div class="second">
+                    
+                    <div id="Active">
+                       <input type="text" name="attività" id="attività" placeholder="attività">
+                        
+                    </div>
+                    <div id="kcal">
+                        
+                    </div>
+                    <div>
+                        <input type='text' id='oreSvolte'>
+                    </div>
+                    <div>
+                        <input type="text" name="" id="minutiSvolti">
+                    </div>
+                    <div id="risultato">
+
+                    </div>
+                    
+                </div>
+                <div class="second">
+                    <div id="suggerimento">
+                            
+                    </div>
+                </div>
+                
+                <div class="second basso">
+                    <div><p>Cibo</p></div>
+                    <div><p>Quantità in gr</p></div>
+                    <div><p>Quante volte al giorno</p></div>
+                    <div><p>Risultato</p></div>
+                </div>
+                <div class="second colorato">
+                    <label>Cos'hai mangiato?</label>
+                </div>
+                <div class="second">
+                    <div>
+                        <input type="text" name="cibo" id="cibo" placeholder="cibo assunto">
+                    </div>
+                    <div>
+                        <span id="ciboKcal"></span>
+                    </div>
+                    <div>
+                        <input type="text" name="inGrammi" id="inGrammi" placeholder="in ht/cl">
+                    </div>
+                    <div>
+                        <span id="risultatoKcalorico"></span>
+                    </div>
+                </div>
+                <div class="second">
+                    <div id="menuCibo">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="reset" id="reset">Delete</button>   
+        </div>
+        <hr>
+        <div>
+            <div id="grassoOMagro">
+                <div>
+                    <p>Qui il tuo BMR: <span id="recordingWeight"></span></p>
+                </div>
+                <hr>
+                <div>
+                    <div>
+                        <h4>Qui le tue attività</h4>
+                        <span class="list">
+
+                        </span>
+                    </div>
+                    <hr>
+                    <div>
+                        <h4>Qui i tuoi pasti</h4>
+                        <span class="list">
+
+                        </span>
+                    </div>
+                    <hr>
+                    <p>
+                        Qui il riepilogo dei tuoi valori e il loro calcolo.<br>
+                        Qui troverai il totale di ciò che hai consumato e 
+                        il totale di ciò che hai assunto di modo tale che tu 
+                        possa sapere se sei in carenza calorica o in eccedenza.
+                        <span id="riepilogoFinale"></span>
+                        
+                    </p>
+                    <button id="convertiArray">Calc</button>
+                    <button type="reset" id="cancellaRiepilogo">Delete</button>
+                    <button type="button" id="salvaRisultati">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <a href="#inizio">Vai</a>
+
+    <script src="dinamiche_tabella.js" type="module"></script>
+    <script src="codJQuery.js" type="module"></script>
+</body>
+</html>
